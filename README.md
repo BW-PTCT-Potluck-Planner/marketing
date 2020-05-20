@@ -19,6 +19,12 @@ These pages need to look OK down to a viewport width of 320px. This is the width
 [∞]: https://blog.codinghorror.com/the-infinite-version/
 [iphonese]: https://everymac.com/systems/apple/iphone/specs/apple-iphone-se-a1662-united-states-att-tmobile-verizon-specs.html
 
+## LESS/CSS structure
+
+Use [BEM][]. One file per block (including any modified variants).
+
+[BEM]: http://getbem.com/
+
 ## Hacking
 
 See and/or run the `install-prerequisites` target in the Makefile to get the things you need to build this site. You’ll also want to have a look at the `watch-less` target to see how to have `less-watch-compiler` automatically re-build your CSS when you change the LESS source.
