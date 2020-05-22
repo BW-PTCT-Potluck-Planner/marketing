@@ -33,6 +33,13 @@
 
     &__main {
         padding-left: 1rem;
+
+        @media @wider-than-mobile {
+            // On wider-than-mobile screens, the images tend to be taller than the text on their side. This balances the text out a bit
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
     }
 
     &--shrinkable-last &__main {
