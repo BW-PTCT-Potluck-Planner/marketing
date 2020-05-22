@@ -1,0 +1,52 @@
+// Name taken from https://html5up.net/story
+.spotlight {
+    display: flex;
+
+    &--shrinkable-last {
+        flex-direction: row-reverse;
+    }
+
+    &__shrinkable {
+        background-position: center;
+        background-origin: center;
+        flex-basis: content;
+
+        flex-shrink: 0; // don't let it shrink in the x-direction
+        
+        width: 10ch;
+        
+        @media @wider-than-mobile {
+            width:  25vw;
+            height: 25vw;
+        }
+
+        &--potlucky {
+            background-image: url(/images/spencer-davis-_yWhM5TZgdo-unsplash-square.jpg);
+            background-size: cover;
+        }
+
+        &--mappy {
+            background-image: url(/images/i-25.png);
+            background-size: cover;
+        }
+    }
+
+    &__main {
+        padding-left: 1rem;
+    }
+
+    &--shrinkable-last &__main {
+        padding-left: unset;
+        padding-right: 1rem;
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    &__verbiage {
+
+    }
+}
