@@ -9,25 +9,25 @@
     &__shrinkable {
         background-position: center;
         background-origin: center;
+        background-size: cover;
         flex-basis: content;
 
         flex-shrink: 0; // don't let it shrink in the x-direction
         
         width: 10ch;
-        
+
         @media @wider-than-mobile {
             width:  25vw;
             height: 25vw;
         }
 
+        // I dislike these modifiers but no browser can use attr() for this
         &--potlucky {
             background-image: url(/images/spencer-davis-_yWhM5TZgdo-unsplash-square.jpg);
-            background-size: cover;
         }
 
         &--mappy {
             background-image: url(/images/i-25.png);
-            background-size: cover;
         }
     }
 
