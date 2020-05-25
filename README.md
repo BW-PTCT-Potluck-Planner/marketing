@@ -23,7 +23,7 @@ These pages need to look OK down to a viewport width of 320px. This is the width
 
 Use [BEM][]. One file per block (including any modified variants).
 
-[BEM]: http://getbem.com/
+[bem]: http://getbem.com/
 
 ## Hacking
 
