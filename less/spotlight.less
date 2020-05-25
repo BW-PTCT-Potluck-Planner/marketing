@@ -1,4 +1,7 @@
 // Name taken from https://html5up.net/story
+// A Spotlight contains two children: a _shrinkable_ and a _main_.
+// Display-wise, Spotlights come in two flavors: shrinkable-first and shrinkable-last.
+// (If you don’t use either modifier, your Spotlight won’t look quite right.)
 .spotlight {
     display: flex;
 
@@ -17,8 +20,9 @@
         width: 10ch;
 
         @media @wider-than-mobile {
-            width:  25vw;
-            height: 25vw;
+            // I wanted this to be square. https://stackoverflow.com/a/10441480 says that padding-bottom width percentages are calculated based on the **width** of the parent's containing block (!). 25% of the width of the containing block is a fine width. If I change the width/padding-bottom ratio, I'll change the aspect ratio of the block.
+            width:  25%;
+            padding-bottom: 25%; 
         }
 
         // I dislike these modifiers but no browser can use attr() for this
@@ -32,8 +36,6 @@
     }
 
     &__main {
-        padding-left: 1rem;
-
         @media @wider-than-mobile {
             // On wider-than-mobile screens, the images tend to be taller than the text on their side. This balances the text out a bit
             display: flex;
@@ -42,9 +44,18 @@
         }
     }
 
+    &--shrinkable-first &__main {
+        padding-left: 1rem;
+        @media @narrower-than-maximum {
+            padding-right: 1rem;
+        }
+    }
+
     &--shrinkable-last &__main {
-        padding-left: unset;
         padding-right: 1rem;
+        @media @narrower-than-maximum {
+            padding-left: 1rem;
+        }
     }
 
     &__title {

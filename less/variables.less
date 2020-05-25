@@ -1,6 +1,12 @@
 @mobile:            ~"(max-width: 500px)";
 @wider-than-mobile: ~"(min-width: 500.02px)";
 
+// With viewports wider than this width, we just let the browser fill up with empty space on the sides.
+@maximum-defined-width: 100ch;
+@teeny-bit-wider-than-maximum-defined-width: @maximum-defined-width + .02ch;
+@wider-than-maximum:    ~"(min-width: @{teeny-bit-wider-than-maximum-defined-width})";
+@narrower-than-maximum: ~"(max-width: @{maximum-defined-width})";
+
 :root {
     // from https://coolors.co/be7c4d-92140c-353238-be5a38-c1b4ae
     --color-copper: hsla(25%, 59%, 75%, 1);
