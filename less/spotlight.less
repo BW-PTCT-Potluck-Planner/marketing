@@ -1,0 +1,70 @@
+// Name taken from https://html5up.net/story
+// A Spotlight contains two children: a _shrinkable_ and a _main_.
+// Display-wise, Spotlights come in two flavors: shrinkable-first and shrinkable-last.
+// (If you don’t use either modifier, your Spotlight won’t look quite right.)
+.spotlight {
+    display: flex;
+
+    &--shrinkable-last {
+        flex-direction: row-reverse;
+    }
+
+    &__shrinkable {
+        background-position: center;
+        background-origin: center;
+        background-size: cover;
+        flex-basis: content;
+
+        flex-shrink: 0; // don't let it shrink in the x-direction
+        
+        width: 10ch;
+
+        @media @wider-than-mobile {
+            // I wanted this to be square. https://stackoverflow.com/a/10441480 says that padding-bottom width percentages are calculated based on the **width** of the parent's containing block (!). 25% of the width of the containing block is a fine width. If I change the width/padding-bottom ratio, I'll change the aspect ratio of the block.
+            width: 25%;
+            padding-bottom: 25%;
+        }
+
+        // I dislike these modifiers but no browser can use attr() for this
+        &--potlucky {
+            background-image: url(/images/spencer-davis-_yWhM5TZgdo-unsplash-square.jpg);
+        }
+
+        &--mappy {
+            background-image: url(/images/i-25.png);
+        }
+    }
+
+    &__main {
+        @media @wider-than-mobile {
+            // On wider-than-mobile screens, the images tend to be taller than the text on their side. This balances the text out a bit
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+
+    &--shrinkable-first &__main {
+        padding-left: 1rem;
+        @media @narrower-than-maximum {
+            padding-right: 1rem;
+        }
+    }
+
+    &--shrinkable-last &__main {
+        padding-right: 1rem;
+        @media @narrower-than-maximum {
+            padding-left: 1rem;
+        }
+    }
+
+    &__title {
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    &__verbiage {
+
+    }
+}

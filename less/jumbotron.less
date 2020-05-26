@@ -1,0 +1,39 @@
+// A loose reimplementation of https://getbootstrap.com/docs/4.5/components/jumbotron/
+
+.jumbotron {
+    background: var(--color-jet);
+    color: white;
+
+    padding: 5rem 1rem;
+
+    @media @wider-than-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__innards {
+
+    }
+
+    &__title {
+        font-weight: bold;
+
+        @media @wider-than-mobile {
+            font-size: 3rem;
+        }
+    }
+
+    &__subtitle {
+        font-style: italic;
+        text-align: right;
+
+        @media (max-width: 360px) {
+            // the point at which "A well…everyone." breaks onto a second line
+            padding-right: 10ch;
+        }
+
+        @media @wider-than-mobile {
+            font-size: 1.5rem;
+        }
+    }
+}
