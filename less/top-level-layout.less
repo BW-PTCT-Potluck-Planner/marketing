@@ -1,11 +1,27 @@
 // This is for styling <body> and its children.
 
-html {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 body {
     max-width: @maximum-defined-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// Sticky-footer styles, done the most BEMful way possible
+
+html, body {
+    height: 100%;
+}
+
+// The sticky-footer block class is not expected to work properly if applied to anything other than the body element.
+/* body */.sticky-footer {
+    display: flex;
+    flex-direction: column;
+    
+    &__not-the-footer {
+        flex: 1 0 auto;
+    }
+    
+    &__the-footer {
+        flex-shrink: 0;
+    }
 }
