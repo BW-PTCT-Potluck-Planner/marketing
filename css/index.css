@@ -190,6 +190,27 @@ body {
 .sticky-footer__the-footer {
   flex-shrink: 0;
 }
+.navbar {
+  background: var(--color-jet);
+  color: var(--color-silver-pale);
+  padding: 0 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__logotype,
+.navbar__links {
+  display: block;
+  padding: 1rem 0;
+}
+.navbar__logotype {
+  color: unset;
+  text-decoration: unset;
+}
+.navbar__link {
+  color: unset;
+  text-decoration: unset;
+}
 .jumbotron {
   color: white;
   background: var(--color-jet);
