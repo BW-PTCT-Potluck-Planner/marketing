@@ -2,9 +2,13 @@
     
 }
 
-.pinch-in-a-bit() {
+.pinch-in-a-bit {
     margin-inline-start: 1rem;
     margin-inline-end:   1rem;
+    @media @mobile {
+        margin-inline-start: .5rem;
+        margin-inline-end:   .5rem;
+    }
 }
 
 .suppress-link-style() {
