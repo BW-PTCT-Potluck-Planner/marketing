@@ -1,32 +1,50 @@
 // A loose reimplementation of https://getbootstrap.com/docs/4.5/components/jumbotron/
 
 .jumbotron {
-    background: var(--color-jet);
     color: white;
+    background: var(--color-jet);
+    background-image: url(/images/alexander-kovacs-Avk4GmRbjWU-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    
+    
+    
+    // An optional element. If present, it must be the child of .jumbotron and everything else (innards) needs to go inside/in front of the backdrop curtain.
+    &__backdrop-curtain {
+        -webkit-backdrop-filter: brightness(50%);   
+        backdrop-filter: brightness(50%);
 
-    padding: 5rem 1rem;
-
-    @media @wider-than-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__innards {
-
-    }
-
-    &__title {
-        font-weight: bold;
+        padding: 5rem 1rem;
 
         @media @wider-than-mobile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__innards {
+    }
+    
+    &__title {
+        font-weight: bold;
+        
+        @media @wider-than-mobile {
             font-size: 3rem;
+        }
+        
+        // in case of Firefox (as of May 2020), we need to keep the contrast up…somehow
+        @supports not ((backdrop-filter: brightness(50%)) or (-webkit-backdrop-filter: brightness(50%))) {
+            // yes, Firefox uses -webkit- properties for this
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
         }
     }
 
     &__subtitle {
         font-style: italic;
         text-align: right;
-
         @media (max-width: 360px) {
             // the point at which "A well…everyone." breaks onto a second line
             padding-right: 10ch;
