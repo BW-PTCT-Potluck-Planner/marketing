@@ -240,6 +240,9 @@ body {
   border-radius: 2rem;
   border: 3px solid;
 }
+.feature-showcase {
+  margin: 1rem 0;
+}
 .spotlight {
   display: flex;
 }
@@ -276,7 +279,7 @@ body {
 .spotlight--shrinkable-first .spotlight__main {
   padding-left: 1rem;
 }
-@media (max-width: 100ch) {
+@media (max-width: 110ch) {
   .spotlight--shrinkable-first .spotlight__main {
     padding-right: 1rem;
   }
@@ -284,7 +287,7 @@ body {
 .spotlight--shrinkable-last .spotlight__main {
   padding-right: 1rem;
 }
-@media (max-width: 100ch) {
+@media (max-width: 110ch) {
   .spotlight--shrinkable-last .spotlight__main {
     padding-left: 1rem;
   }

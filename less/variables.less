@@ -3,9 +3,15 @@
 
 // With viewports wider than this width, we just let the browser fill up with empty space on the sides.
 @maximum-defined-width: 100ch;
+@narrower-than-maximum: ~"(max-width: @{maximum-defined-width})";
+
+// This "modulo side spacing" is for elements that need to be changed somewhat when they're close to, but not at, the maximum width. A prime example is the Spotlight block that needs whitespace around the text. This whitespace can come from internal padding (at narrow widths) or from beyond the maximum defined width (when the viewport is very wide), but when the viewport is at or _just_ beyond the @narrower-than-maximum breakpoint, the text runs right to the edge of the viewport and looks funny. These "plus spacing" demi-breakpoints pinch in the text a little bit in cases where the text needs lateral whitespace.
+@side-spacing: 10ch;
+@maximum-defined-width-plus-spacing: @maximum-defined-width + @side-spacing;
+@narrower-than-maximum-plus-spacing: ~"(max-width: @{maximum-defined-width-plus-spacing})";
+
 @teeny-bit-wider-than-maximum-defined-width: @maximum-defined-width + .02ch;
 @wider-than-maximum:    ~"(min-width: @{teeny-bit-wider-than-maximum-defined-width})";
-@narrower-than-maximum: ~"(max-width: @{maximum-defined-width})";
 
 :root {
     // from https://coolors.co/be7c4d-92140c-353238-be5a38-c1b4ae
