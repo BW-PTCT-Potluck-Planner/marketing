@@ -6,43 +6,45 @@
     <link rel='stylesheet' href='/css/index.css'>
 	<title>Potluck Planner</title>
 </head>
-<body>
-	<div class='jumbotron'>
-		<div class='jumbotron__innards'>
-			<div class='jumbotron__title'>
-				A well-planned potluck is better for everyone.
-			</div>
-			<div class='jumbotron__subtitle'>
-				Let us help.
+<body class='sticky-footer'>
+	<div class='sticky-footer__not-the-footer'>
+		<div class='jumbotron'>
+			<div class='jumbotron__innards'>
+				<div class='jumbotron__title'>
+					A well-planned potluck is better for everyone.
+				</div>
+				<div class='jumbotron__subtitle'>
+					Let us help.
+				</div>
 			</div>
 		</div>
+		<section class='feature-showcase'>
+			<div class='spotlight spotlight--shrinkable-first'>
+				<div class='spotlight__shrinkable spotlight__shrinkable--potlucky' data-photo-credits='Spencer Davis via unsplash.it'></div>
+				<div class='spotlight__main'>
+					<div class='spotlight__title'>Coordinate better.</div>
+					<div class='spotlight__verbiage'>
+						What makes or breaks a potluck is what everyone brings. Potluck Planner gives you and your guests a place to coordinate so you don't end up with three entrées and no drinks or napkins.
+					</div>
+				</div>
+			</div>
+			<div class='spotlight spotlight--shrinkable-last '>
+				<div class='spotlight__shrinkable spotlight__shrinkable--mappy'></div>
+				<div class='spotlight__main'>
+					<div class='spotlight__title'>Get everyone there.</div>
+					<div class='spotlight__verbiage'>
+						Write your address and let everyone see it. Or just write “my house” if all your friends are in the know already.
+					</div>
+				</div>
+			</div>
+		</section>
+	    <section class='calls-to-action'>
+			<a href='/' class='marketing-button'>
+				<div class='marketing-button__inner-text'>Sign up</div>
+			</a>
+		</section>
 	</div>
-	<section class='feature-showcase'>
-		<div class='spotlight spotlight--shrinkable-first'>
-			<div class='spotlight__shrinkable spotlight__shrinkable--potlucky' data-photo-credits='Spencer Davis via unsplash.it'></div>
-			<div class='spotlight__main'>
-				<div class='spotlight__title'>Coordinate better.</div>
-				<div class='spotlight__verbiage'>
-					What makes or breaks a potluck is what everyone brings. Potluck Planner gives you and your guests a place to coordinate so you don't end up with three entrées and no drinks or napkins.
-				</div>
-			</div>
-		</div>
-		<div class='spotlight spotlight--shrinkable-last '>
-			<div class='spotlight__shrinkable spotlight__shrinkable--mappy'></div>
-			<div class='spotlight__main'>
-				<div class='spotlight__title'>Get everyone there.</div>
-				<div class='spotlight__verbiage'>
-					Write your address and let everyone see it. Or just write “my house” if all your friends are in the know already.
-				</div>
-			</div>
-		</div>
-	</section>
-  <section class='calls-to-action'>
-		<a href='/' class='marketing-button'>
-			<div class='marketing-button__inner-text'>Sign up</div>
-		</a>
-	</section>
-	<footer class='footer-sitewide'>
+	<footer class='footer-sitewide sticky-footer__the-footer'>
 		<nav class='footer-sitewide__links'>
 			<a class='footer-sitewide__link' href='/'>Home</a>
 			<a class='footer-sitewide__link' href='/'>Tips</a>
