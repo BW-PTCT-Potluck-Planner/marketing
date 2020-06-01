@@ -192,7 +192,7 @@ body {
 }
 .navbar {
   background: var(--color-jet);
-  color: var(--color-silver-pale);
+  color: white;
   padding: 0 0.5rem;
   margin-bottom: 1rem;
   display: flex;
@@ -214,7 +214,7 @@ body {
 .jumbotron {
   color: white;
   background: var(--color-jet);
-  background-image: url(/images/alexander-kovacs-Avk4GmRbjWU-unsplash.jpg);
+  background-image: url(/images/appetizers.jpeg);
   background-position: center;
   background-size: cover;
 }
@@ -299,7 +299,7 @@ body {
   }
 }
 .spotlight__shrinkable--potlucky {
-  background-image: url(/images/spencer-davis-_yWhM5TZgdo-unsplash-square.jpg);
+  background-image: url(/images/texmex.jpeg);
 }
 .spotlight__shrinkable--mappy {
   background-image: url(/images/i-25.png);
